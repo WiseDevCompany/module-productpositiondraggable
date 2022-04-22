@@ -1,6 +1,11 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-	<type name="Magento\Catalog\Block\Adminhtml\Category\Tab\Product">
-		<plugin name="Wise_ProductPositionDraggable_Plugin_Backend_Magento_Catalog_Block_Adminhtml_Category_Tab_Product" type="Wise\ProductPositionDraggable\Plugin\Backend\Magento\Catalog\Block\Adminhtml\Category\Tab\Product" sortOrder="10" disabled="false"/>
-	</type>
+    <type name="Magento\Catalog\Block\Adminhtml\Category\Tab\Product">
+        <plugin 
+            name="Wise_ProductPositionDraggable_Plugin_Backend_Magento_Catalog_Block_Adminhtml_Category_Tab_Product" 
+            type="Wise\ProductPositionDraggable\Plugin\Backend\Magento\Catalog\Block\Adminhtml\Category\Tab\Product" 
+            sortOrder="10" 
+            disabled="false"
+        />
+    </type>
 </config>

@@ -16,7 +16,6 @@ class Thumbnail extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\Abstr
     /**
      * @var Magento\Catalog\Helper\Image
      */
-
     protected $imageHelper;
 
     /**
@@ -25,18 +24,16 @@ class Thumbnail extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\Abstr
      * @param Magento\Catalog\Model\ProductFactory $productFactory
      * @param array $data
      */
-
     public function __construct(
         \Magento\Backend\Block\Context $context,
-        ImageHelper $imageHelper,   
+        ImageHelper $imageHelper,
         ProductFactory $productFactory,
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->imageHelper = $imageHelper;
-        $this->productFactory = $productFactory;   
+        $this->productFactory = $productFactory;
     }
-
 
     /**
      * Generate link to product image thumbnail from grid row data
@@ -44,18 +41,16 @@ class Thumbnail extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\Abstr
      * @param \Magento\Framework\DataObject $row
      * @return string
      */
-
     public function render(\Magento\Framework\DataObject $row)
     {
         $productModel = $this->productFactory->create();
         $product = $productModel->load($productModel->getIdBySku($row->getSku()));
         $imageHelper = $this->imageHelper->init($product, 'product_listing_thumbnail');
 
-        $imageUrl = ($this->_getValue($row) !== '') 
+        $imageUrl = ($this->_getValue($row) !== '')
                     ? $imageHelper->getUrl()
                     : $imageHelper->getDefaultPlaceholderUrl();
 
         return '<img src="'.$imageUrl.'" width="'.$imageHelper->getWidth().'" height="'.$imageHelper->getHeight().'"/>';
-
     }
 }
