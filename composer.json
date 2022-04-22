@@ -1,6 +1,6 @@
 {
     "name": "wise/module-productpositiondraggable",
-    "description": "Module add drag and drop option for products in category for changing product's position in category",
+    "description": "Module adds drag and drop option for products in category for changing product's position in category",
     "type": "magento2-module",
     "license": "GPL-3.0",
     "authors": [
